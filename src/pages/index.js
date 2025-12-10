@@ -1,0 +1,66 @@
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Heading from '@theme/Heading';
+import styles from './index.module.css';
+
+function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
+
+  return (
+    <header className={clsx(styles.bookHero)}>
+      <div className="container">
+        <div className={styles.bookGrid}>
+
+          <div className={styles.bookContent}>
+            <Heading as="h1" className={styles.bookTitle}>
+              {siteConfig.title}
+            </Heading>
+
+            <p className={styles.bookSubtitle}>{siteConfig.tagline}</p>
+
+            <p className={styles.bookDescription}>
+             <b>A complete research-backed textbook on Physical AI & Humanoid Robotics.</b> 
+            </p>
+
+            <div className={styles.bookButtons}>
+              {/* ✅ OPENS MODULE 1 */}
+              <Link 
+                className="button button--primary button--xl"  // made it extra large
+                to="/docs/module1"
+                style={{ fontSize: '1.5rem', padding: '1rem 2rem' }} // extra size via inline style
+              >
+                📘 Start Reading
+              </Link>
+            </div>
+          </div>
+
+          <div className={styles.bookImageWrapper}>
+            <img
+              src="/img/book-stack.png"
+              alt="Book Cover"
+              className={styles.bookImage}
+            />
+          </div>
+
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+
+  return (
+    <Layout title={siteConfig.title} description={siteConfig.tagline}>
+      <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
+    </Layout>
+  );
+}
+
