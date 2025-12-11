@@ -22,7 +22,7 @@ function HomepageHeader() {
             <p className={styles.bookSubtitle}>{siteConfig.tagline}</p>
 
             <p className={styles.bookDescription}>
-             <b>A complete research-backed textbook on Physical AI & Humanoid Robotics.</b> 
+             <b>A complete research-backed textbook on Physical AI & Humanoid Robotics By Eraj Naz.</b> 
             </p>
 
             <div className={styles.bookButtons} style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
@@ -63,5 +63,4 @@ export default function Home() {
     </Layout>
   );
 }
-
 
