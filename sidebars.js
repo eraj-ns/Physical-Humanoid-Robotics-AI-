@@ -4,8 +4,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 1: ROS 2 Architecture & Programming',
+      link: { type: 'doc', id: 'Module1/intro' }, // landing page for Module 1
       items: [
-        'Module1/intro',
         'Module1/ch01-ros2-architecture',
         'Module1/ch02-nodes-topics-services',
         'Module1/ch03-python-agents-rclpy',
@@ -15,8 +15,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 2: Digital Twin and Simulation',
+      link: { type: 'doc', id: 'Module2/intro' }, // landing page for Module 2
       items: [
-        'Module2/intro',
         'Module2/ch01-gazebo-physics-and-collisions',
         'Module2/ch02-digital-twin-environment-design',
       ],
@@ -24,6 +24,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 3: Isaac Sim and AI-Robot Basics',
+      link: { type: 'doc', id: 'Module3/intro' }, // landing page for Module 3
       items: [
         'Module3/Introduction-to-AI-Robot-Brain',
         'Module3/Isaac-Sim-Simulation',
@@ -33,8 +34,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Module 4: Cognitive Planning and Autonomy',
+      link: { type: 'doc', id: 'Module4/intro' }, // landing page for Module 4
       items: [
-        'Module4/intro',
         'Module4/ch01-voice-to-action',
         'Module4/ch02-llm-cognitive-planning',
         'Module4/ch03-vision-and-navigation',
@@ -43,6 +44,5 @@ const sidebars = {
     },
   ],
 };
-
 
 module.exports = sidebars;
