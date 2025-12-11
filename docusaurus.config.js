@@ -5,15 +5,24 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Physical AI & Humanoid Robotics Course',
   favicon: 'img/book-stack.png',
+
+  future: {
+    v4: true,
+  },
+
   url: 'https://your-docusaurus-site.example.com',
   baseUrl: '/',
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+
+  organizationName: 'eraj-ns',
+  projectName: 'Physical-Humanoid-Robotics-AI',
+
   onBrokenLinks: 'throw',
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
   presets: [
     [
       'classic',
@@ -21,27 +30,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: 'rss',
-            xslt: true,
-          },
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
-        markdown: {
-          // moved inside preset
-          onBrokenMarkdownLinks: 'warn',
         },
       }),
     ],
@@ -68,7 +59,7 @@ const config = {
             label: 'READ MODULES',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/eraj-ns/Physical-Humanoid-Robotics-AI',
             label: 'GitHub',
             position: 'right',
           },
@@ -90,16 +81,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/eraj_naz74667',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/eraj-naz-b919572bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
               },
             ],
           },
@@ -108,12 +99,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/eraj-ns/Physical-Humanoid-Robotics-AI',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ERAJ NAZ. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
