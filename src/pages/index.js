@@ -22,18 +22,23 @@ function HomepageHeader() {
             <p className={styles.bookSubtitle}>{siteConfig.tagline}</p>
 
             <p className={styles.bookDescription}>
-             <b>A complete research-backed textbook on Physical AI & Humanoid Robotics By Eraj Naz.</b> 
+              <b>A complete research-backed textbook on Physical AI & Humanoid Robotics By Eraj Naz.</b>
             </p>
 
-            <div className={styles.bookButtons} style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-              {/* ✅ OPENS MODULE 1 */}
-              <Link 
-                className="button button--primary button--xl"  
-                to="/docs/module1"
-                style={{ fontSize: '1.8rem', padding: '1.2rem 3rem' }} 
-              >
-                📘 Start Reading
-              </Link>
+            <div
+              className={styles.bookButtons}
+              style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
+            >
+              {/* ✅ OPEN ALL MODULES (Module1 + Module2 + Module3 + Module4) */}
+              
+             <Link
+              className="button button--primary button--xl"
+              to="/docs/Module1/intro"
+              style={{ fontSize: '1.8rem', padding: '1.2rem 3rem' }}
+             >
+             📘 Start Reading
+             </Link>
+
             </div>
           </div>
 
