@@ -16,7 +16,7 @@ const config = {
   organizationName: 'eraj-ns',
   projectName: 'Physical-Humanoid-Robotics-AI',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -73,7 +73,7 @@ const config = {
             items: [
               {
                 label: 'BOOK',
-                to: '/docs/intro',
+                to: '/docs/Module1/intro',
               },
             ],
           },
