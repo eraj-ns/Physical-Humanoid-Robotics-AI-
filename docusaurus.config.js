@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Physical AI & Humanoid Robotics Course',
-  favicon: 'img/book-stack.png',
+  favicon: 'img/pngwing.com (4).png',
 
   future: {
     v4: true,
@@ -49,7 +49,7 @@ const config = {
         title: 'BOOK',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/stack-of-books.png',
+          src: 'img/pngwing.com (4).png',
         },
         items: [
           {
