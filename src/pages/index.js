@@ -44,7 +44,7 @@ function HomepageHeader() {
 
           <div className={styles.bookImageWrapper}>
             <img
-              src="static/img/pngwing.com (5).png"
+              static="/img/pngwing.com (5).png"
               alt="Book Cover"
               className={styles.bookImage}
             />
