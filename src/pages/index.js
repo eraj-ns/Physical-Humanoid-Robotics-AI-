@@ -44,7 +44,7 @@ function HomepageHeader() {
 
           <div className={styles.bookImageWrapper}>
             <img
-              src="/img/book-stack.png"
+              src="/img/pngwing.com (5).png"
               alt="Book Cover"
               className={styles.bookImage}
             />
@@ -68,4 +68,3 @@ export default function Home() {
     </Layout>
   );
 }
-
