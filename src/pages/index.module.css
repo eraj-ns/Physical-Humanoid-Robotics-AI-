@@ -1,6 +1,6 @@
 .bookHero {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: linear-gradient(135deg, #6884bd, #161616);
   color: white;
 }
 
@@ -41,9 +41,9 @@
 }
 
 .bookImage {
-  max-width: 320px;
+  max-width: 500px;
   border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(43, 42, 42, 0.4);
 }
 
 @media (max-width: 996px) {
