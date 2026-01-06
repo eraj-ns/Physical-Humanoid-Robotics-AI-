@@ -1,0 +1,800 @@
+2026-01-03 20:33:44,256 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 20:33:44,265 - __main__ - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 20:33:44,266 - __main__ - INFO - RAG Agent initialized successfully using openai-agents library
+2026-01-03 20:33:44,266 - __main__ - ERROR - Error running RAG agent: EOF when reading a line
+2026-01-03 20:35:09,019 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 20:35:09,033 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 20:35:09,035 - backend.agent - INFO - RAG Agent initialized successfully using openai-agents library
+2026-01-03 20:35:09,037 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-03 20:35:11,386 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 20:35:11,387 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4a1cbad19f5a9659b9390c655aee6df4', 'date': 'Sat, 03 Jan 2026 15:35:10 GMT', 'x-envoy-upstream-service-time': '22', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '5e4dade3-4c50-43dc-a869-90292a7fd45b', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 20:36:03,163 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 20:36:03,163 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 20:36:09,229 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:36:09,233 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 20:36:11,176 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/responses "HTTP/1.1 402 Payment Required"
+2026-01-03 20:36:11,179 - openai.agents - ERROR - Error getting response: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 4898. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36UGoOtloYg1hsqDif3s5MB2sg1'}. (request_id: None)
+2026-01-03 20:36:11,179 - backend.agent - ERROR - Error in query processing: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 4898. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36UGoOtloYg1hsqDif3s5MB2sg1'}
+2026-01-03 20:36:11,184 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-03 20:36:12,110 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 20:36:12,312 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:36:12,313 - backend.agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-03 20:36:12,318 - openai._base_client - INFO - Retrying request to /responses in 0.430532 seconds
+2026-01-03 20:36:13,746 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/responses "HTTP/1.1 402 Payment Required"
+2026-01-03 20:36:13,747 - openai.agents - ERROR - Error getting response: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 4898. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36UGoOtloYg1hsqDif3s5MB2sg1'}. (request_id: None)
+2026-01-03 20:36:13,747 - backend.agent - ERROR - Error in query processing: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 4898. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36UGoOtloYg1hsqDif3s5MB2sg1'}
+2026-01-03 20:36:13,750 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-03 20:36:14,398 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 20:36:14,399 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '7844a4510773bd9862445a74fc7874a5', 'date': 'Sat, 03 Jan 2026 15:36:13 GMT', 'x-envoy-upstream-service-time': '14', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'bfbe3083-2acf-4ad2-ab76-536a9aea3d97', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 20:36:14,401 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 20:36:14,402 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 20:36:14,739 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 401 Unauthorized"
+2026-01-03 20:36:14,739 - openai.agents - ERROR - [non-fatal] Tracing client error 401: {
+  "error": {
+    "message": "Incorrect API key provided: sk-or-v1*************************************************************a074. You can find your API key at https://platform.openai.com/account/api-keys.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "invalid_api_key"
+  }
+}
+2026-01-03 20:36:20,084 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:36:20,085 - backend.agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-03 20:36:20,088 - openai._base_client - INFO - Retrying request to /responses in 0.456439 seconds
+2026-01-03 20:36:21,032 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/responses "HTTP/1.1 402 Payment Required"
+2026-01-03 20:36:21,033 - openai.agents - ERROR - Error getting response: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 4898. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36UGoOtloYg1hsqDif3s5MB2sg1'}. (request_id: None)
+2026-01-03 20:36:21,033 - backend.agent - ERROR - Error in query processing: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 4898. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36UGoOtloYg1hsqDif3s5MB2sg1'}
+2026-01-03 20:36:22,029 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 401 Unauthorized"
+2026-01-03 20:36:22,030 - openai.agents - ERROR - [non-fatal] Tracing client error 401: {
+  "error": {
+    "message": "Incorrect API key provided: sk-or-v1*************************************************************a074. You can find your API key at https://platform.openai.com/account/api-keys.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "invalid_api_key"
+  }
+}
+2026-01-03 20:37:09,853 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 20:37:09,864 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 20:37:11,387 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 20:37:12,012 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:37:12,019 - backend.agent - INFO - Retrieved 3 chunks for query: What is ROS 2?...
+2026-01-03 20:37:12,721 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 20:37:12,722 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '085def321206c80c155432cace88b1d6', 'date': 'Sat, 03 Jan 2026 15:37:11 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '73d88ca7-b148-4001-aa7b-6b11643f86e6', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 20:37:22,712 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 20:37:22,712 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 20:37:28,110 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:37:28,111 - backend.agent - INFO - Retrieved 3 chunks for query: Explain robotics concepts...
+2026-01-03 20:37:28,902 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 20:37:29,105 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:37:29,106 - backend.agent - INFO - Retrieved 3 chunks for query: Tell me about AI and robotics...
+2026-01-03 20:39:02,405 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 20:39:02,416 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 20:39:04,339 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 20:39:04,873 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:39:04,874 - backend.agent - INFO - Retrieved 3 chunks for query: What is ROS 2?...
+2026-01-03 20:39:05,567 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 20:39:05,568 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'de9b07e2894224247b0d259408501b3d', 'date': 'Sat, 03 Jan 2026 15:39:04 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'c72058d5-8ae9-4792-828a-cab0a4eb6120', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 20:39:14,654 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 20:39:14,654 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 20:39:20,360 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:39:20,364 - backend.agent - INFO - Retrieved 3 chunks for query: Explain robotics concepts...
+2026-01-03 20:39:21,146 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 20:39:21,429 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 20:39:21,429 - backend.agent - INFO - Retrieved 3 chunks for query: Tell me about AI and robotics...
+2026-01-03 20:40:06,425 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 20:40:06,435 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 20:40:06,435 - backend.agent - INFO - RAG Agent initialized successfully using openai-agents library
+2026-01-03 20:40:27,509 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 20:40:27,517 - __main__ - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 20:40:27,518 - __main__ - INFO - RAG Agent initialized successfully using openai-agents library
+2026-01-03 20:40:27,518 - __main__ - ERROR - Error running RAG agent: EOF when reading a line
+2026-01-03 21:38:25,716 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:38:25,732 - backend.free_tier_agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:38:25,732 - backend.free_tier_agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:39:17,010 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:39:17,019 - backend.free_tier_agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:39:17,020 - backend.free_tier_agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:39:17,022 - backend.free_tier_agent - INFO - Processing query: What is ROS 2?
+2026-01-03 21:39:18,754 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 21:39:18,755 - backend.free_tier_agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '767d4eaf41ffcc0febcce7859acf943a', 'date': 'Sat, 03 Jan 2026 16:39:17 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'db226bf4-4cf4-4d38-8cbf-beefd038b60b', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 21:39:29,212 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:39:29,212 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:39:31,958 - backend.free_tier_agent - ERROR - Local embedding failed: The paging file is too small for this operation to complete. (os error 1455)
+2026-01-03 21:39:32,574 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 21:39:32,576 - backend.free_tier_agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 21:39:32,576 - backend.free_tier_agent - INFO - Query processed successfully. Response length: 2702
+2026-01-03 21:39:32,577 - backend.free_tier_agent - INFO - Processing query: Explain robotics concepts
+2026-01-03 21:39:33,294 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 21:39:33,295 - backend.free_tier_agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'cfdd2dc4d6646a5b4462eb2a55bf74dd', 'date': 'Sat, 03 Jan 2026 16:39:32 GMT', 'x-envoy-upstream-service-time': '15', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '5e886f15-878b-4bca-bc4a-cbb9d70709b2', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 21:39:33,298 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:39:33,299 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:39:36,293 - backend.free_tier_agent - ERROR - Local embedding failed: The paging file is too small for this operation to complete. (os error 1455)
+2026-01-03 21:39:36,430 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 21:39:36,431 - backend.free_tier_agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-03 21:39:36,431 - backend.free_tier_agent - INFO - Query processed successfully. Response length: 2713
+2026-01-03 21:39:36,432 - backend.free_tier_agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-03 21:39:37,186 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 21:39:37,187 - backend.free_tier_agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'e38be0d35657fe3582bfa9a9e3cfda76', 'date': 'Sat, 03 Jan 2026 16:39:36 GMT', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '03240dfe-a832-4b2c-abfa-9772c481cc84', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 21:39:37,189 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:39:37,190 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:39:41,517 - backend.free_tier_agent - ERROR - Local embedding failed: The paging file is too small for this operation to complete. (os error 1455)
+2026-01-03 21:39:41,989 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 21:39:41,990 - backend.free_tier_agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-03 21:39:41,990 - backend.free_tier_agent - INFO - Query processed successfully. Response length: 2717
+2026-01-03 21:42:22,116 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:42:22,128 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:42:22,128 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:43:28,126 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:43:28,136 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:43:28,137 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:43:28,138 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-03 21:43:29,537 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 21:43:29,538 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '8c9668215a1b7a8088836ee16b2666a4', 'date': 'Sat, 03 Jan 2026 16:43:28 GMT', 'x-envoy-upstream-service-time': '14', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '19b30179-88fe-4db2-8a64-80df4b49f057', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 21:43:38,087 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:43:38,087 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:46:15,437 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:46:15,451 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:46:15,451 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:46:15,452 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-03 21:46:15,455 - backend.agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 21:46:24,418 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:46:24,419 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:46:29,774 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 21:46:29,776 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 21:46:29,776 - backend.agent - INFO - Query processed successfully. Response length: 3177
+2026-01-03 21:49:23,457 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:49:23,468 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:49:23,468 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:50:54,684 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:50:54,694 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:50:54,695 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:50:54,695 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-03 21:50:54,697 - backend.agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 21:51:03,694 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:51:03,694 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:51:09,901 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 21:51:09,903 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 21:51:09,903 - backend.agent - INFO - Query processed successfully. Response length: 3177
+2026-01-03 21:52:40,704 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 21:52:40,714 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 21:52:40,714 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 21:52:40,715 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-03 21:52:40,716 - backend.agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 21:52:49,820 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 21:52:49,820 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 21:52:56,029 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 21:52:56,031 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 21:52:56,031 - backend.agent - INFO - Query processed successfully. Response length: 3177
+2026-01-03 23:15:17,218 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:15:17,241 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:15:17,242 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:15:17,361 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:15:19,906 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:15:19,927 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:15:19,927 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:15:19,934 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:15:19,945 - backend.api - ERROR - Error processing query: asyncio.run() cannot be called from a running event loop
+2026-01-03 23:15:20,044 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 500 Internal Server Error"
+2026-01-03 23:15:20,054 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-03 23:16:20,069 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:16:20,091 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:16:20,091 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:16:20,171 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:16:22,059 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:16:22,076 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:16:22,076 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:16:22,081 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:16:22,092 - agent - INFO - Processing query: What is ROS 2?
+2026-01-03 23:16:22,096 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:16:44,733 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 23:16:44,733 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 23:16:51,094 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:16:51,098 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 23:16:51,098 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-03 23:16:51,099 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-03 23:16:51,102 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-03 23:16:51,110 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-03 23:18:59,010 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:18:59,027 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:18:59,027 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:19:00,392 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:19:00,409 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:19:00,409 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:19:00,413 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:21:40,112 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:21:40,126 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:21:40,127 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:21:41,848 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:21:41,861 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:21:41,861 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:21:41,865 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:21:41,870 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:21:41,876 - agent - INFO - Processing query: What is ROS 2?
+2026-01-03 23:21:41,878 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:21:56,373 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 23:21:56,374 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 23:22:02,802 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:22:02,819 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 23:22:02,819 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-03 23:22:02,820 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-03 23:22:02,822 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-03 23:22:02,826 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-03 23:48:08,357 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:48:08,371 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:48:08,371 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:48:08,458 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:50:18,655 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:50:18,675 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:50:18,676 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:50:18,755 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:50:20,743 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:50:20,758 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:50:20,759 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:50:20,762 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:50:20,774 - agent - INFO - Processing query: What is ROS 2?
+2026-01-03 23:50:20,779 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:50:49,406 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 23:50:49,406 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 23:50:54,741 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:50:54,745 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 23:50:54,745 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-03 23:50:54,746 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-03 23:50:54,749 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-03 23:50:54,756 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-03 23:50:54,761 - agent - INFO - Processing query: test
+2026-01-03 23:50:54,762 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:50:54,764 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 23:50:54,764 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 23:50:59,386 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:50:59,388 - agent - INFO - Retrieved 5 chunks for query: test...
+2026-01-03 23:50:59,388 - agent - INFO - Query processed successfully. Response length: 3161
+2026-01-03 23:50:59,391 - backend.api - INFO - Query processed successfully: test...
+2026-01-03 23:50:59,394 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-03 23:54:28,424 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:54:28,441 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:54:28,441 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:54:28,558 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:54:30,473 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:54:30,491 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:54:30,491 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:54:30,497 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:54:30,510 - agent - INFO - Processing query: What is ROS 2?
+2026-01-03 23:54:30,514 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:54:48,125 - agent - ERROR - Local embedding failed: 
+2026-01-03 23:54:48,517 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:54:48,521 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 23:54:48,522 - agent - INFO - Query processed successfully. Response length: 2813
+2026-01-03 23:54:48,524 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-03 23:56:28,421 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:56:28,437 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:56:28,438 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:56:28,522 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-03 23:56:29,999 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 23:56:30,019 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-03 23:56:30,019 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-03 23:56:30,023 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-03 23:56:30,030 - agent - INFO - Processing query: What is ROS 2?
+2026-01-03 23:56:30,034 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:56:41,091 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 23:56:41,091 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 23:56:43,622 - agent - ERROR - Local embedding failed: The paging file is too small for this operation to complete. (os error 1455)
+2026-01-03 23:56:44,029 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:56:44,032 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-03 23:56:44,032 - agent - INFO - Query processed successfully. Response length: 2813
+2026-01-03 23:56:44,033 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-03 23:56:44,036 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-03 23:56:44,041 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-03 23:56:44,052 - agent - INFO - Processing query: test
+2026-01-03 23:56:44,053 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-03 23:56:44,057 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 23:56:44,058 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 23:56:46,407 - agent - ERROR - Local embedding failed: The paging file is too small for this operation to complete. (os error 1455)
+2026-01-03 23:56:46,545 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 23:56:46,546 - agent - INFO - Retrieved 5 chunks for query: test...
+2026-01-03 23:56:46,547 - agent - INFO - Query processed successfully. Response length: 2781
+2026-01-03 23:56:46,548 - backend.api - INFO - Query processed successfully: test...
+2026-01-03 23:56:46,550 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 12:25:08,577 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 12:25:08,593 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 12:25:08,594 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 12:25:08,666 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 12:25:10,021 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 12:25:10,038 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 12:25:10,039 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 12:25:10,044 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 12:25:10,063 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 12:25:10,067 - agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-04 12:25:25,916 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 12:25:25,916 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 12:25:33,978 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 12:25:33,980 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 12:25:33,983 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 12:25:33,985 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 12:25:33,988 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 12:25:33,998 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 12:32:08,089 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 12:32:08,122 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 12:32:08,122 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 12:32:08,129 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 12:32:08,133 - backend.agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-04 12:32:17,612 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 12:32:17,613 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 12:32:27,082 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 12:32:28,414 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 12:32:28,415 - backend.agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 12:32:28,436 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 12:32:28,436 - backend.agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-04 12:32:28,441 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 12:32:28,444 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 12:32:39,757 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 12:32:40,020 - backend.agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-04 12:32:40,021 - backend.agent - INFO - Query processed successfully. Response length: 3173
+2026-01-04 12:32:40,031 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 12:32:40,032 - backend.agent - WARNING - Cohere embedding failed: cannot access local variable 'os' where it is not associated with a value, falling back to local embeddings
+2026-01-04 12:32:40,035 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 12:32:40,036 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 12:32:48,434 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 12:32:48,437 - backend.agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-04 12:32:48,439 - backend.agent - INFO - Query processed successfully. Response length: 3180
+2026-01-04 13:16:04,700 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 13:16:04,715 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 13:16:04,715 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 13:16:04,717 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 13:16:06,998 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 13:16:07,847 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 13:16:07,849 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 13:16:07,849 - backend.agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 13:16:49,142 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 13:16:49,155 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 13:16:49,155 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 13:16:49,209 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 13:16:50,470 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 13:16:50,484 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 13:16:50,484 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 13:16:50,487 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 13:16:50,493 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 13:16:52,315 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 13:16:52,316 - agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '89bb03f4d6212cebd5bb673f4a077d17', 'date': 'Sun, 04 Jan 2026 08:16:50 GMT', 'x-envoy-upstream-service-time': '15', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '31094220-d34d-4bc9-a6b3-7ad25a65a520', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 13:17:05,095 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 13:17:05,095 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 13:17:10,233 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 13:17:10,234 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 13:17:10,235 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 13:17:10,236 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 13:17:10,239 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 13:17:10,246 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 13:17:10,252 - agent - INFO - Processing query: test
+2026-01-04 13:17:11,054 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 13:17:11,057 - agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '368b8963810fd01a4e17266f27ac6f33', 'date': 'Sun, 04 Jan 2026 08:17:09 GMT', 'x-envoy-upstream-service-time': '14', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '78e20b7c-0f10-4318-a4db-b660c60f3a90', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 13:17:11,059 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 13:17:11,059 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 13:17:16,460 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 13:17:16,462 - agent - INFO - Retrieved 5 chunks for query: test...
+2026-01-04 13:17:16,462 - agent - INFO - Query processed successfully. Response length: 3161
+2026-01-04 13:17:16,463 - backend.api - INFO - Query processed successfully: test...
+2026-01-04 13:17:16,465 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 13:19:47,844 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 13:19:47,854 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 13:19:47,855 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 13:19:47,858 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 13:19:49,571 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 13:19:49,573 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '80e485950ff14befaf42ac3231e2afba', 'date': 'Sun, 04 Jan 2026 08:19:47 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '30e197cd-2c31-4cef-81b3-2d97bea073db', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 13:19:58,146 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 13:19:58,146 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 13:20:10,615 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 13:20:10,632 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 13:20:10,633 - backend.agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 13:20:10,645 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 13:20:11,680 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 13:20:11,681 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '11cd9a0dcd5dd41ff58b8aa218b832f6', 'date': 'Sun, 04 Jan 2026 08:20:09 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '9929d936-4303-4f29-9821-8f780e4de8e7', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 13:20:11,685 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 13:20:11,685 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 13:20:18,488 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 13:20:18,489 - backend.agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-04 13:20:18,490 - backend.agent - INFO - Query processed successfully. Response length: 3173
+2026-01-04 13:20:18,504 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 13:20:19,391 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 13:20:19,392 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '69e2f7db487336923aab9872921b7193', 'date': 'Sun, 04 Jan 2026 08:20:17 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '7be85427-48d4-4cc5-94e7-334d7a741c17', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 13:20:19,396 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 13:20:19,397 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 13:20:25,884 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 13:20:25,885 - backend.agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-04 13:20:25,885 - backend.agent - INFO - Query processed successfully. Response length: 3180
+2026-01-04 14:03:44,602 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:03:44,615 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:03:44,615 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:03:44,618 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:03:46,349 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:03:46,351 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '13f3870778262d1f01ee33aa12c24962', 'date': 'Sun, 04 Jan 2026 09:03:44 GMT', 'x-envoy-upstream-service-time': '24', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'bfed3fdd-8b5b-4e41-82e1-7fc5690ca4fc', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:04:01,058 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:04:01,058 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:04:05,648 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:04:05,655 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:04:05,656 - backend.agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 14:04:05,674 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 14:04:06,478 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:04:06,480 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '9ba55c61b73772da772ba89f2d0a7d5e', 'date': 'Sun, 04 Jan 2026 09:04:04 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'fdd440c7-f01c-4775-bf94-d6092b6339ee', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:04:06,484 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:04:06,484 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:04:10,183 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:04:10,184 - backend.agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-04 14:04:10,185 - backend.agent - INFO - Query processed successfully. Response length: 3173
+2026-01-04 14:04:10,190 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 14:04:10,900 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:04:10,901 - backend.agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '364171881fdd8d08c5a8e492564344dc', 'date': 'Sun, 04 Jan 2026 09:04:09 GMT', 'x-envoy-upstream-service-time': '13', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'e02cf807-0fa9-48b3-8a28-28d05fd696d6', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:04:10,903 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:04:10,904 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:04:14,666 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:04:14,668 - backend.agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-04 14:04:14,668 - backend.agent - INFO - Query processed successfully. Response length: 3180
+2026-01-04 14:13:40,883 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:13:40,925 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:13:40,926 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:13:41,029 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:13:42,186 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:13:42,199 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:13:42,199 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:13:42,204 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:13:42,214 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:13:43,783 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:13:43,784 - agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '289dc49e999cd1eeff7b4ae3107bef1b', 'date': 'Sun, 04 Jan 2026 09:13:41 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '4496d530-328b-4cf4-9c49-27cd13646c3d', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:13:55,484 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:13:55,484 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:14:00,481 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:14:00,490 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:14:00,491 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 14:14:00,495 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 14:14:00,504 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 14:14:00,523 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 14:21:26,909 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:21:26,923 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:21:26,923 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:21:26,988 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:21:28,114 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:21:28,139 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:21:28,139 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:21:28,143 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:21:28,150 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:21:29,931 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:21:29,937 - agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '145b5b426dc6d2100e4e3016f6da4841', 'date': 'Sun, 04 Jan 2026 09:21:28 GMT', 'x-envoy-upstream-service-time': '18', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '4eedee14-f598-486c-8301-288639041212', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:21:42,560 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:21:42,560 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:22:39,945 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:22:39,976 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:22:39,976 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:22:40,054 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:22:41,169 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:22:41,200 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:22:41,200 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:22:41,207 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:23:12,895 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:23:12,940 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:23:12,941 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:23:13,033 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:23:14,620 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:23:14,646 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:23:14,646 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:23:14,651 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:23:14,663 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:23:15,969 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:23:15,974 - agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '06137c1b494a7bb74dcc67ac6044c4b7', 'date': 'Sun, 04 Jan 2026 09:23:14 GMT', 'x-envoy-upstream-service-time': '20', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a3b4ade1-af62-40a7-b25a-224d22d1cfa2', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:23:24,038 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:23:24,038 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:23:28,930 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:23:28,936 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:23:28,936 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 14:23:28,939 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 14:23:28,945 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 14:23:28,957 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 14:25:31,046 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:25:31,081 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:25:31,082 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:25:31,246 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:25:33,097 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:25:33,133 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:25:33,134 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:25:33,141 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:25:33,152 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:25:34,657 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:25:34,658 - agent - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4d716d5c64d9c5e944087a05dfd995e0', 'date': 'Sun, 04 Jan 2026 09:25:32 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '7e4a5c34-71d4-4074-ae85-333bfbbc9bc2', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-04 14:25:47,935 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-04 14:25:47,939 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-04 14:25:54,828 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:25:54,834 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:25:54,834 - agent - INFO - Query processed successfully. Response length: 3177
+2026-01-04 14:25:54,836 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 14:25:54,862 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 14:25:54,889 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 14:38:34,632 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:38:34,826 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:38:34,826 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:39:08,334 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:39:08,347 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:39:09,978 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:39:09,981 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.01s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '001f8a6e62346b5f365203220af9a9c2', 'date': 'Sun, 04 Jan 2026 09:39:08 GMT', 'x-envoy-upstream-service-time': '16', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '061be124-c0f7-4805-a01b-d92d5cd33165', 'message': 'Please wait and try again later'}
+2026-01-04 14:39:11,237 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:39:11,239 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.17s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '5e55728866e9d5a936e79442842bacae', 'date': 'Sun, 04 Jan 2026 09:39:09 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '98b820bd-9850-4b7e-a9a5-fcaf57bdaa81', 'message': 'Please wait and try again later'}
+2026-01-04 14:39:13,640 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:39:13,642 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.02s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'fd11164ff5e2e6aade89320b7754827a', 'date': 'Sun, 04 Jan 2026 09:39:11 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a5651e64-7871-45ef-9a74-c6a0c081df7c', 'message': 'Please wait and try again later'}
+2026-01-04 14:39:17,914 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:39:17,916 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.67s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b6c4c392d8aaaaff862366d2bdbcdc23', 'date': 'Sun, 04 Jan 2026 09:39:16 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd05cf762-82b8-4c05-bcde-eb2f89416912', 'message': 'Please wait and try again later'}
+2026-01-04 14:39:26,904 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 14:39:26,922 - backend.agent - INFO - Cohere embedding succeeded on attempt 5
+2026-01-04 14:40:19,442 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:40:19,471 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:40:19,472 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:40:19,531 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:40:20,594 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:40:20,617 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:40:20,618 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:40:20,623 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:44:09,962 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:44:09,992 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:44:09,993 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:44:10,054 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 14:44:10,058 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 14:44:10,061 - agent - INFO - Processing query: test
+2026-01-04 14:44:11,348 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:44:11,349 - agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.05s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c1c3aeafbffdb7a46e4c940ce021a2e4', 'date': 'Sun, 04 Jan 2026 09:44:09 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'fd7a1d02-509a-4d25-a34b-ef915f3eae83', 'message': 'Please wait and try again later'}
+2026-01-04 14:44:12,635 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:44:12,637 - agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.14s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f0410f6088f100c398dc5a9ef587d2c2', 'date': 'Sun, 04 Jan 2026 09:44:10 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'ad0ca73c-2879-4296-9e3a-a4d4cdad77e0', 'message': 'Please wait and try again later'}
+2026-01-04 14:44:15,014 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:44:15,017 - agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.07s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '9d23c8357ca3230d8b5f8e61e7c1e8f5', 'date': 'Sun, 04 Jan 2026 09:44:13 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '991dc33e-386f-47a4-b83c-3d992c2efd54', 'message': 'Please wait and try again later'}
+2026-01-04 14:44:19,318 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:44:19,319 - agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.21s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '88e1faba839174d51d71f9354ea2ac16', 'date': 'Sun, 04 Jan 2026 09:44:17 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '3bc94c3e-8182-4a8d-a1a0-8134c7348d22', 'message': 'Please wait and try again later'}
+2026-01-04 14:44:27,838 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 14:44:27,868 - agent - INFO - Cohere embedding succeeded on attempt 5
+2026-01-04 14:44:28,268 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:44:28,274 - agent - INFO - Retrieved 5 chunks for query: test...
+2026-01-04 14:44:28,274 - agent - INFO - Query processed successfully. Response length: 2756
+2026-01-04 14:44:28,276 - backend.api - INFO - Query processed successfully: test...
+2026-01-04 14:44:28,284 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 14:45:54,465 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:45:54,510 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:45:54,510 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:45:54,513 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:45:55,854 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:45:55,865 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.00s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'fffc017da1f00108b0a70e95efd4cea7', 'date': 'Sun, 04 Jan 2026 09:45:54 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '7498b538-9a19-4cbe-a8fe-5b66a09322a9', 'message': 'Please wait and try again later'}
+2026-01-04 14:45:57,150 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 14:45:57,182 - backend.agent - INFO - Cohere embedding succeeded on attempt 2
+2026-01-04 14:45:57,580 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:45:57,588 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:45:57,589 - backend.agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 14:45:57,606 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 14:45:58,363 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:45:58,367 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.04s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '3a645bb53e19473310424f15f49074ff', 'date': 'Sun, 04 Jan 2026 09:45:56 GMT', 'x-envoy-upstream-service-time': '2', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a8b5a4ed-0263-4c84-8e4c-beeb05c5d5c7', 'message': 'Please wait and try again later'}
+2026-01-04 14:45:59,645 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:45:59,647 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.20s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '51ffbe1e3dcedbca06af238c4e004811', 'date': 'Sun, 04 Jan 2026 09:45:57 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '6e95b29e-bb3d-408f-9d36-dc80f22f843b', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:02,084 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:02,086 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.14s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '5099f97c1b2fa6e223014e9a470beb22', 'date': 'Sun, 04 Jan 2026 09:46:00 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '69414594-3259-440b-8fa0-220bc22fcde9', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:06,480 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:06,485 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.40s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '26fc43df2961988dffe830fe6d9e1323', 'date': 'Sun, 04 Jan 2026 09:46:04 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'b8b45512-5e0d-4443-bf7d-69f0c6ad6954', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:15,229 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:15,233 - backend.agent - WARNING - Cohere rate limit hit on attempt 5, waiting 16.19s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '8814795fbd4f0077edab4449e7b202fd', 'date': 'Sun, 04 Jan 2026 09:46:13 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'bfdcc5a0-d68f-4762-b204-dc53339c962b', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:31,425 - backend.agent - ERROR - Error retrieving chunks from Qdrant: Cohere embedding failed after maximum retries
+2026-01-04 14:46:31,427 - backend.agent - ERROR - Fallback retrieval also failed: cannot access local variable 'query_embedding' where it is not associated with a value
+2026-01-04 14:46:31,429 - backend.agent - WARNING - No relevant information found in knowledge base
+2026-01-04 14:46:31,436 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 14:46:32,103 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:32,107 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.10s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'badd776578c22a00766a2704de53b812', 'date': 'Sun, 04 Jan 2026 09:46:30 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '680c8b05-daba-4455-8cd5-7aa644c7b1c7', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:33,453 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:33,458 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.09s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c51281f2959b7e362ba5f7e8d024489e', 'date': 'Sun, 04 Jan 2026 09:46:31 GMT', 'x-envoy-upstream-service-time': '6', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '726de2e6-670f-4e52-a0c6-b5552972840e', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:35,808 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:35,810 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.08s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'e9fb59988779fdb319a459580dfd09bb', 'date': 'Sun, 04 Jan 2026 09:46:33 GMT', 'x-envoy-upstream-service-time': '21', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '31491651-f9c2-40d2-8429-65b2f7943aa5', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:40,158 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:40,162 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.25s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '931029272d068cc9896491f4ba27949b', 'date': 'Sun, 04 Jan 2026 09:46:38 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a47ffa0c-0120-4722-8eb0-487232e7242e', 'message': 'Please wait and try again later'}
+2026-01-04 14:46:48,746 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:46:48,752 - backend.agent - WARNING - Cohere rate limit hit on attempt 5, waiting 17.03s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'cd83cb0bd415672aded89442aa778c53', 'date': 'Sun, 04 Jan 2026 09:46:46 GMT', 'x-envoy-upstream-service-time': '14', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'e0ec2997-c48b-40e8-98b5-83e2e5df118e', 'message': 'Please wait and try again later'}
+2026-01-04 14:47:05,786 - backend.agent - ERROR - Error retrieving chunks from Qdrant: Cohere embedding failed after maximum retries
+2026-01-04 14:47:05,786 - backend.agent - ERROR - Fallback retrieval also failed: cannot access local variable 'query_embedding' where it is not associated with a value
+2026-01-04 14:47:05,789 - backend.agent - WARNING - No relevant information found in knowledge base
+2026-01-04 14:48:35,713 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:48:35,757 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:48:35,757 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:48:35,833 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:48:36,920 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:48:36,964 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:48:36,965 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:48:36,968 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:48:36,975 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:48:38,649 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:48:38,652 - agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.02s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'ba40a47e1e65321757596f1972cfe281', 'date': 'Sun, 04 Jan 2026 09:48:36 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '0f0ff829-4009-4168-a1f1-d63dbf05130c', 'message': 'Please wait and try again later'}
+2026-01-04 14:48:39,927 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:48:39,931 - agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.19s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c3a615569d9e394da0b502d953dbd787', 'date': 'Sun, 04 Jan 2026 09:48:38 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '26daa9c4-c286-4faf-9e57-30725865e93b', 'message': 'Please wait and try again later'}
+2026-01-04 14:48:42,367 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:48:42,371 - agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.14s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '777d3f0bcc5b02e3b334000955cbc143', 'date': 'Sun, 04 Jan 2026 09:48:40 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'c89ec055-ae72-4cb1-8c7f-60ee402ff59e', 'message': 'Please wait and try again later'}
+2026-01-04 14:48:46,772 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 14:48:46,801 - agent - INFO - Cohere embedding succeeded on attempt 4
+2026-01-04 14:48:47,232 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:48:47,238 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:48:47,239 - agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 14:48:47,243 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 14:48:47,252 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 14:48:47,280 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 14:58:09,392 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:58:09,416 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:58:09,416 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:58:09,496 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 14:58:10,585 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 14:58:10,609 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 14:58:10,609 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 14:58:10,614 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 14:58:10,625 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 14:58:12,451 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:58:12,454 - agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.10s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'd61a8b79b3e11119b585e0e15c6f6b82', 'date': 'Sun, 04 Jan 2026 09:58:12 GMT', 'x-envoy-upstream-service-time': '13', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '59670036-3fa5-4514-9986-eda268e95388', 'message': 'Please wait and try again later'}
+2026-01-04 14:58:13,789 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:58:13,791 - agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.04s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '39cd3ad4b80f63f690ee2167deb17d92', 'date': 'Sun, 04 Jan 2026 09:58:13 GMT', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '0a9abcac-c3c8-4ae0-b75b-762c00e42ba0', 'message': 'Please wait and try again later'}
+2026-01-04 14:58:16,095 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:58:16,096 - agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.15s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'cab5af6829932cf9ebbf15a5061ca0c6', 'date': 'Sun, 04 Jan 2026 09:58:15 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '6ce2993b-29c8-47b4-98b0-06a82ec325c4', 'message': 'Please wait and try again later'}
+2026-01-04 14:58:20,496 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 14:58:20,497 - agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.75s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '3dcd33eb51d27592a9215da6049dd723', 'date': 'Sun, 04 Jan 2026 09:58:20 GMT', 'x-envoy-upstream-service-time': '4', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '80d45a7e-54a9-4a72-8bc4-b117832e8e21', 'message': 'Please wait and try again later'}
+2026-01-04 14:58:29,599 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 14:58:29,635 - agent - INFO - Cohere embedding succeeded on attempt 5
+2026-01-04 14:58:30,063 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 14:58:30,069 - agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 14:58:30,070 - agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 14:58:30,072 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 14:58:30,082 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 14:58:30,093 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"
+2026-01-04 15:01:23,058 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 15:01:23,080 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 15:01:23,081 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 15:01:23,084 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 15:01:24,368 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:01:24,369 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.09s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'fe4fac27482b4da2db7cb5aeba586c44', 'date': 'Sun, 04 Jan 2026 10:01:24 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'ae052399-1648-445d-8627-e507f0dcb6d9', 'message': 'Please wait and try again later'}
+2026-01-04 15:01:25,701 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:01:25,703 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.15s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'cffc7ab940f74e5a89029ae5fcab7ccd', 'date': 'Sun, 04 Jan 2026 10:01:25 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '60878e03-4d47-4e9e-8cf9-ef5b0f6c4201', 'message': 'Please wait and try again later'}
+2026-01-04 15:01:28,086 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:01:28,087 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.35s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '6f1bb8a7aaf0a945af8025e0db12cf92', 'date': 'Sun, 04 Jan 2026 10:01:27 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'f43484b8-3924-451f-af5c-590600510e9f', 'message': 'Please wait and try again later'}
+2026-01-04 15:01:32,674 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:01:32,676 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.80s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '474bc31d372f8c01119dd1eeb7225488', 'date': 'Sun, 04 Jan 2026 10:01:32 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '4dd27000-7e2f-41eb-9f7e-3fb89e04a5a3', 'message': 'Please wait and try again later'}
+2026-01-04 15:01:41,789 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:01:41,791 - backend.agent - WARNING - Cohere rate limit hit on attempt 5, waiting 17.52s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '215b58a62766179a4c1431894d5bcefd', 'date': 'Sun, 04 Jan 2026 10:01:41 GMT', 'x-envoy-upstream-service-time': '14', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a0f72d4d-d1a9-4601-85b1-27bd544c9d86', 'message': 'Please wait and try again later'}
+2026-01-04 15:01:59,315 - backend.agent - ERROR - Error retrieving chunks from Qdrant: Cohere embedding failed after maximum retries
+2026-01-04 15:01:59,315 - backend.agent - ERROR - Fallback retrieval also failed: cannot access local variable 'query_embedding' where it is not associated with a value
+2026-01-04 15:01:59,315 - backend.agent - WARNING - No relevant information found in knowledge base
+2026-01-04 15:01:59,316 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 15:01:59,917 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:01:59,921 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.02s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b8b7d2ddc6e5440033c3c082d6cabcba', 'date': 'Sun, 04 Jan 2026 10:01:59 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '61f040da-6a09-4961-99a0-95a0fc58817f', 'message': 'Please wait and try again later'}
+2026-01-04 15:02:01,187 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:02:01,188 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.09s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'e6d9445f7e6ac9c41012c8a2e33e47e5', 'date': 'Sun, 04 Jan 2026 10:02:01 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '3a5e0fed-14b6-4d24-9c50-eb53f1eeeea3', 'message': 'Please wait and try again later'}
+2026-01-04 15:02:03,523 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:02:03,525 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.08s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f9943333b6792ddf82b2fd1224c276de', 'date': 'Sun, 04 Jan 2026 10:02:03 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '6b9dcf12-1134-4659-b0a4-b684a2a96f8a', 'message': 'Please wait and try again later'}
+2026-01-04 15:02:07,837 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:02:07,841 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.33s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b63946e15425b5b6219c636bfa034630', 'date': 'Sun, 04 Jan 2026 10:02:07 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '1c601317-7eb2-4dc1-a09a-a27c1524e9df', 'message': 'Please wait and try again later'}
+2026-01-04 15:02:16,473 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:02:16,475 - backend.agent - WARNING - Cohere rate limit hit on attempt 5, waiting 16.45s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '042e80e57c3d6f8f03c9d5664242cda1', 'date': 'Sun, 04 Jan 2026 10:02:16 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '6595f190-3fdc-4aae-bbcd-72aa888dd56c', 'message': 'Please wait and try again later'}
+2026-01-04 15:02:32,926 - backend.agent - ERROR - Error retrieving chunks from Qdrant: Cohere embedding failed after maximum retries
+2026-01-04 15:02:32,926 - backend.agent - ERROR - Fallback retrieval also failed: cannot access local variable 'query_embedding' where it is not associated with a value
+2026-01-04 15:02:32,927 - backend.agent - WARNING - No relevant information found in knowledge base
+2026-01-04 15:02:32,930 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 15:02:33,647 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:02:33,650 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.09s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b32c50fa33d313a13c69419e850445bf', 'date': 'Sun, 04 Jan 2026 10:02:33 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'dd22cbae-f72d-4e1e-bfc7-ded178310226', 'message': 'Please wait and try again later'}
+2026-01-04 15:02:35,036 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:02:35,054 - backend.agent - INFO - Cohere embedding succeeded on attempt 2
+2026-01-04 15:02:35,620 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:02:35,626 - backend.agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-04 15:02:35,627 - backend.agent - INFO - Query processed successfully. Response length: 3197
+2026-01-04 15:04:15,621 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 15:04:15,661 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 15:04:15,662 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 15:04:15,663 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 15:04:17,025 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:04:17,027 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.01s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'ffba667eaa8952d605defeafe90de4c7', 'date': 'Sun, 04 Jan 2026 10:04:16 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '90bd829c-c4c1-49d5-8097-cbc080284be7', 'message': 'Please wait and try again later'}
+2026-01-04 15:04:18,299 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:04:18,300 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.10s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4254d992d93eedb156ac787abe34e8e5', 'date': 'Sun, 04 Jan 2026 10:04:18 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'ce1f961c-1022-470d-8364-a7907f242a2d', 'message': 'Please wait and try again later'}
+2026-01-04 15:04:20,873 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:04:20,874 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.17s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'd0b8dbb0ceeea168d410e6ae3bcd9bfb', 'date': 'Sun, 04 Jan 2026 10:04:20 GMT', 'x-envoy-upstream-service-time': '206', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'f35a9e5e-c44d-4aa7-87b1-876f16836e55', 'message': 'Please wait and try again later'}
+2026-01-04 15:04:25,317 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:04:25,341 - backend.agent - INFO - Cohere embedding succeeded on attempt 4
+2026-01-04 15:04:25,801 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:04:25,807 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 15:04:25,808 - backend.agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 15:05:53,152 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 15:05:53,179 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 15:05:53,179 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 15:05:53,181 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 15:05:54,692 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:05:54,694 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.02s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'e4cec677213c3335f79c5944faa58b19', 'date': 'Sun, 04 Jan 2026 10:05:54 GMT', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '06e2e834-926f-4b6a-85c1-6b27511c5c8b', 'message': 'Please wait and try again later'}
+2026-01-04 15:05:56,038 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:05:56,045 - backend.agent - INFO - Cohere embedding succeeded on attempt 2
+2026-01-04 15:05:56,459 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:05:56,466 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 15:05:56,466 - backend.agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 15:05:56,471 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 15:05:57,109 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:05:57,110 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.08s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b9f81dd16f6e97b61089672b3fd4c5ae', 'date': 'Sun, 04 Jan 2026 10:05:56 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '18a6489f-b91b-40e4-9627-386a64acfde6', 'message': 'Please wait and try again later'}
+2026-01-04 15:05:58,457 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:05:58,487 - backend.agent - INFO - Cohere embedding succeeded on attempt 2
+2026-01-04 15:05:58,630 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:05:58,631 - backend.agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-04 15:05:58,632 - backend.agent - INFO - Query processed successfully. Response length: 3173
+2026-01-04 15:05:58,634 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 15:05:59,252 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:05:59,256 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.08s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b9ab8ad9b114624dae6ee5263e253bc3', 'date': 'Sun, 04 Jan 2026 10:05:59 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'cf5b25d5-6975-4af5-b4a1-3f49ac70e8c5', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:00,591 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:06:00,593 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.02s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f018f973fac3812dd55a59fe02e670bf', 'date': 'Sun, 04 Jan 2026 10:06:00 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '478b8808-97c1-4f6f-af3e-867e70e55a9e', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:02,862 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:06:02,865 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.24s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f865044581901d7764b135e12c6eb3e3', 'date': 'Sun, 04 Jan 2026 10:06:02 GMT', 'x-envoy-upstream-service-time': '13', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '9ed0d5b9-0f2f-4ea7-95b6-d7649416976d', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:07,375 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:06:07,378 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.07s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '827c4bd1cbc12dc55ded809e4ec9cf19', 'date': 'Sun, 04 Jan 2026 10:06:07 GMT', 'x-envoy-upstream-service-time': '30', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '35886c82-9406-4f94-9bca-8c10a365da5e', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:15,740 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:06:15,741 - backend.agent - WARNING - Cohere rate limit hit on attempt 5, waiting 16.37s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '86995e09a6ca293ca996983b71eede6c', 'date': 'Sun, 04 Jan 2026 10:06:15 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '0c835c2e-fb5e-4a78-8291-cd51b48eb507', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:32,108 - backend.agent - ERROR - Error retrieving chunks from Qdrant: Cohere embedding failed after maximum retries
+2026-01-04 15:06:32,769 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:06:32,770 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.02s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4ca9bce62c2ad6a4ef462e5b62cfa55e', 'date': 'Sun, 04 Jan 2026 10:06:32 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a491d15c-95d6-416e-b833-87e87e77a42f', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:34,046 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:06:34,048 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.10s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c4a4e27d73d028357442bdfd14b72522', 'date': 'Sun, 04 Jan 2026 10:06:33 GMT', 'x-envoy-upstream-service-time': '24', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '84556fa9-d158-4c49-a4a4-cc45609c7a30', 'message': 'Please wait and try again later'}
+2026-01-04 15:06:36,398 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:06:36,408 - backend.agent - INFO - Cohere embedding succeeded on attempt 3
+2026-01-04 15:06:36,841 - backend.agent - INFO - Retrieved 5 chunks via HTTP API for query: Tell me about AI and robotics...
+2026-01-04 15:06:36,842 - backend.agent - INFO - Query processed successfully. Response length: 3197
+2026-01-04 15:11:09,528 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 15:11:09,571 - backend.agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 15:11:09,572 - backend.agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 15:11:09,575 - backend.agent - INFO - Processing query: What is ROS 2?
+2026-01-04 15:11:11,129 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:11,135 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.04s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '96d5421c0772d174ccfc677446cdbf58', 'date': 'Sun, 04 Jan 2026 10:11:11 GMT', 'x-envoy-upstream-service-time': '16', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'b3cbec46-8770-427b-8bdd-0f3743528ad4', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:12,434 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:12,438 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.09s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4a76a3062cc49ba56cdadca63d92b56c', 'date': 'Sun, 04 Jan 2026 10:11:12 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'dfbe9d84-909c-46e4-89b4-c5f390f07811', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:14,779 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:14,783 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.25s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4755eb0b92d483eb9739d44e96a35d1f', 'date': 'Sun, 04 Jan 2026 10:11:14 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '7b8eb8ed-a507-4936-9a6d-d8d98e4150fa', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:19,523 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:19,527 - backend.agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.35s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b57ee64b523b7cab5f5e18cc7728aff3', 'date': 'Sun, 04 Jan 2026 10:11:19 GMT', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '06d6c89e-87a8-4cad-90b5-02858e70e521', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:28,563 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:11:28,575 - backend.agent - INFO - Cohere embedding succeeded on attempt 5
+2026-01-04 15:11:28,999 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:11:29,006 - backend.agent - INFO - Retrieved 5 chunks for query: What is ROS 2?...
+2026-01-04 15:11:29,008 - backend.agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 15:11:29,032 - backend.agent - INFO - Processing query: Explain robotics concepts
+2026-01-04 15:11:29,763 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:29,768 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.05s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c8176d450b7ba6e9b39615f38e7a68e3', 'date': 'Sun, 04 Jan 2026 10:11:29 GMT', 'x-envoy-upstream-service-time': '20', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '870c7018-6a96-4858-9a24-e427aa6cbd15', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:31,108 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:31,112 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.05s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'bcd48ef4a6c30537195631a27281fdc7', 'date': 'Sun, 04 Jan 2026 10:11:30 GMT', 'x-envoy-upstream-service-time': '13', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '4d547a82-cb1e-4a83-9e6c-013866720842', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:33,976 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:33,978 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.26s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f221f6183dbc19bd2ba4a6b5d0c383cc', 'date': 'Sun, 04 Jan 2026 10:11:33 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '073e07ff-e39e-4320-8ed0-114b33c64c5e', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:38,534 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:11:38,562 - backend.agent - INFO - Cohere embedding succeeded on attempt 4
+2026-01-04 15:11:38,971 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:11:38,974 - backend.agent - INFO - Retrieved 5 chunks for query: Explain robotics concepts...
+2026-01-04 15:11:38,975 - backend.agent - INFO - Query processed successfully. Response length: 3173
+2026-01-04 15:11:39,004 - backend.agent - INFO - Processing query: Tell me about AI and robotics
+2026-01-04 15:11:39,922 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:39,924 - backend.agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.07s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'cb684ba8067ca011a7dc390bc783b58f', 'date': 'Sun, 04 Jan 2026 10:11:39 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '781f07ca-f0e3-4bcd-a1a6-1fcd96fec168', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:41,240 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:41,244 - backend.agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.11s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '2e8963da1bb29f7ba9cb813493c0e3ea', 'date': 'Sun, 04 Jan 2026 10:11:41 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '2b64e986-0d47-4be3-82cd-8c0aa64cc996', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:43,605 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:11:43,609 - backend.agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.36s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '8a858df43ccd712ee7e314025b558f6a', 'date': 'Sun, 04 Jan 2026 10:11:43 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd82fcb6e-0400-42f6-add7-5f86658eb003', 'message': 'Please wait and try again later'}
+2026-01-04 15:11:48,237 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:11:48,255 - backend.agent - INFO - Cohere embedding succeeded on attempt 4
+2026-01-04 15:11:48,936 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-04 15:11:48,939 - backend.agent - INFO - Retrieved 5 chunks for query: Tell me about AI and robotics...
+2026-01-04 15:11:48,940 - backend.agent - INFO - Query processed successfully. Response length: 3197
+2026-01-04 15:13:09,693 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 15:13:09,725 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 15:13:09,727 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 15:13:09,801 - httpx - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-01-04 15:13:10,986 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-04 15:13:11,031 - agent - INFO - Qdrant client initialized for collection: rag-chatbot-hackathon
+2026-01-04 15:13:11,032 - agent - INFO - Free Tier RAG Agent initialized successfully
+2026-01-04 15:13:11,041 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-04 15:13:11,054 - agent - INFO - Processing query: What is ROS 2?
+2026-01-04 15:13:12,717 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:13:12,721 - agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.06s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'dfb0ff1f18aeb482c72c79c6106eed0d', 'date': 'Sun, 04 Jan 2026 10:13:12 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '7983e1a2-ec70-4e83-a1d9-4327844e484c', 'message': 'Please wait and try again later'}
+2026-01-04 15:13:14,037 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:13:14,041 - agent - WARNING - Cohere rate limit hit on attempt 2, waiting 2.01s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'ce4db0df742ab3c0e3d836fea77631ab', 'date': 'Sun, 04 Jan 2026 10:13:13 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'b912170d-fa51-4eda-85df-d9df58ec2595', 'message': 'Please wait and try again later'}
+2026-01-04 15:13:16,418 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:13:16,422 - agent - WARNING - Cohere rate limit hit on attempt 3, waiting 4.00s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '86a3924524563c29aab5a5ca3eb6ea1b', 'date': 'Sun, 04 Jan 2026 10:13:16 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '06b45a86-131e-4e72-a883-17cbcacab002', 'message': 'Please wait and try again later'}
+2026-01-04 15:13:20,720 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:13:20,723 - agent - WARNING - Cohere rate limit hit on attempt 4, waiting 8.36s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '550b41971a612f0bfc793a91272298fb', 'date': 'Sun, 04 Jan 2026 10:13:20 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'bb613a90-286a-4321-8239-ff718b8866cb', 'message': 'Please wait and try again later'}
+2026-01-04 15:13:30,076 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:13:30,081 - agent - WARNING - Cohere rate limit hit on attempt 5, waiting 16.68s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '485700e5ab28a35fe34665a1cb534690', 'date': 'Sun, 04 Jan 2026 10:13:29 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '6924719f-e098-4763-82b2-c47935196743', 'message': 'Please wait and try again later'}
+2026-01-04 15:13:46,767 - agent - ERROR - Error retrieving chunks from Qdrant: Cohere embedding failed after maximum retries
+2026-01-04 15:13:47,477 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-04 15:13:47,482 - agent - WARNING - Cohere rate limit hit on attempt 1, waiting 1.00s: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '8c2e202d97a513d3a01c3f7d56521bb1', 'date': 'Sun, 04 Jan 2026 10:13:47 GMT', 'x-envoy-upstream-service-time': '7', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '4943736c-2d7b-4747-92ec-03e19f79a18b', 'message': 'Please wait and try again later'}
+2026-01-04 15:13:48,749 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-04 15:13:48,765 - agent - INFO - Cohere embedding succeeded on attempt 2
+2026-01-04 15:13:49,181 - agent - INFO - Retrieved 5 chunks via HTTP API for query: What is ROS 2?...
+2026-01-04 15:13:49,182 - agent - INFO - Query processed successfully. Response length: 3027
+2026-01-04 15:13:49,184 - backend.api - INFO - Query processed successfully: What is ROS 2?...
+2026-01-04 15:13:49,189 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-01-04 15:13:49,200 - httpx - INFO - HTTP Request: POST http://testserver/query "HTTP/1.1 400 Bad Request"

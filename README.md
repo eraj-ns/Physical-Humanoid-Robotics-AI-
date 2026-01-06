@@ -1,41 +1,72 @@
-# Website
+# RAG System for Docusaurus Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This project implements a Retrieval-Augmented Generation (RAG) system that crawls Docusaurus documentation sites, generates embeddings using Cohere, and stores them in Qdrant for efficient retrieval.
 
-## Installation
+## Features
+
+- Crawls Docusaurus documentation sites automatically
+- Extracts and cleans text content from pages
+- Chunks text with configurable size and overlap
+- Generates embeddings using Cohere's models
+- Stores embeddings in Qdrant vector database
+- Provides vector search functionality
+
+## Prerequisites
+
+- Python 3.8+
+- Cohere API key
+- Qdrant Cloud account (or local instance)
+
+## Setup
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Copy `.env` and fill in your configuration:
+   ```bash
+   cp .env.example .env
+   ```
+3. Update the `.env` file with your API keys and URLs
+
+## Configuration
+
+The system is configured via the `.env` file:
+
+- `COHERE_API_KEY`: Your Cohere API key
+- `QDRANT_URL`: Your Qdrant instance URL
+- `QDRANT_API_KEY`: Your Qdrant API key
+- `DOCUSAURUS_BASE_URL`: The base URL of the Docusaurus site to crawl
+- `CHUNK_SIZE`: Size of text chunks (default: 512)
+- `CHUNK_OVERLAP`: Overlap between chunks (default: 50)
+
+## Usage
+
+### Run the full pipeline
 
 ```bash
-yarn
+python -m src.main
 ```
 
-## Local Development
+This will:
+1. Crawl the Docusaurus site
+2. Extract and clean content
+3. Chunk the text
+4. Generate embeddings
+5. Store embeddings in Qdrant
+
+### Test the search functionality
 
 ```bash
-yarn start
+python -m src.search
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This will run sample searches against your vector database.
 
-## Build
+### Run the test pipeline
 
 ```bash
-yarn build
+python test_pipeline.py
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This runs a complete test of all components with a small sample.

@@ -1,0 +1,7 @@
+qdrant-client
+cohere
+python-dotenv
+sentence-transformers
+torch
+fastapi
+uvicorn[standard]
