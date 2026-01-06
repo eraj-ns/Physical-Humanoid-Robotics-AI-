@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book-embedding-ingestion"
+version = "0.1.0"
+description = "A pipeline for ingesting book documentation, generating embeddings, and storing them in a vector database"
+readme = "README.md"
+authors = [{name = "Developer", email = "dev@example.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.2",
+    "cohere>=4.0.0",
+    "qdrant-client>=1.9.0",
+    "python-dotenv>=1.0.0",
+    "pytest>=7.4.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "mypy",
+    "pytest-cov"
+]
+
+[project.urls]
+Homepage = "https://github.com/example/book-embedding-ingestion"
+Repository = "https://github.com/example/book-embedding-ingestion"
+
+[tool.setuptools.packages.find]
+where = ["src"]

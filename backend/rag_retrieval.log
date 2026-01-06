@@ -1,0 +1,48 @@
+2026-01-03 13:27:34,143 - __main__ - INFO - Starting RAG retrieval for query: --query VLA systems
+2026-01-03 13:27:34,144 - __main__ - ERROR - sentence-transformers not installed. Install with: pip install sentence-transformers
+2026-01-03 13:27:34,146 - __main__ - ERROR - Could not initialize local embedding service. Please install sentence-transformers.
+2026-01-03 13:27:34,146 - __main__ - ERROR - Error in main RAG process: sentence-transformers library is required for local embeddings
+2026-01-03 13:27:52,413 - __main__ - INFO - Starting RAG retrieval for query: --query VLA systems
+2026-01-03 13:27:52,415 - __main__ - ERROR - sentence-transformers not installed. Install with: pip install sentence-transformers
+2026-01-03 13:27:52,416 - __main__ - ERROR - Could not initialize local embedding service. Please install sentence-transformers.
+2026-01-03 13:27:52,416 - __main__ - ERROR - Error in main RAG process: sentence-transformers library is required for local embeddings
+2026-01-05 19:14:42,220 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 19:14:42,221 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-05 19:14:47,687 - rag_retrieval - INFO - Local embedding model initialized successfully
+2026-01-05 19:14:49,832 - rag_retrieval - INFO - Collection has 230 points
+2026-01-05 19:17:57,214 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 19:17:57,214 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-05 19:18:02,144 - rag_retrieval - INFO - Local embedding model initialized successfully
+2026-01-05 19:18:04,147 - rag_retrieval - INFO - Collection has 230 points
+2026-01-05 19:19:57,825 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 19:19:57,825 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-05 19:20:04,424 - rag_retrieval - INFO - Local embedding model initialized successfully
+2026-01-05 19:20:06,553 - rag_retrieval - INFO - Collection has 230 points
+2026-01-05 19:20:08,501 - rag_retrieval - INFO - Collection has 230 points
+2026-01-05 19:20:09,117 - rag_retrieval - WARNING - Cohere API rate limit exceeded (attempt 1/3)
+2026-01-05 19:20:09,117 - rag_retrieval - INFO - Waiting 1 seconds before retry...
+2026-01-05 19:20:10,556 - rag_retrieval - INFO - Using Cohere embedding service
+2026-01-05 19:20:11,158 - rag_retrieval - INFO - Retrieved 3 documents in 2.66s
+2026-01-05 19:20:13,004 - rag_retrieval - INFO - Collection has 230 points
+2026-01-05 19:20:13,420 - rag_retrieval - INFO - Using Cohere embedding service
+2026-01-05 19:20:14,033 - rag_retrieval - INFO - Retrieved 3 documents in 1.03s
+2026-01-05 19:20:15,875 - rag_retrieval - INFO - Collection has 230 points
+2026-01-05 19:20:16,288 - rag_retrieval - WARNING - Cohere API rate limit exceeded (attempt 1/3)
+2026-01-05 19:20:16,288 - rag_retrieval - INFO - Waiting 1 seconds before retry...
+2026-01-05 19:20:17,749 - rag_retrieval - INFO - Using Cohere embedding service
+2026-01-05 19:20:18,332 - rag_retrieval - INFO - Retrieved 3 documents in 2.46s
+2026-01-05 20:14:34,149 - __main__ - INFO - Starting RAG retrieval for query: What is this documentation about?
+2026-01-05 20:14:48,216 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 20:14:48,216 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-05 20:14:53,714 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-05 20:14:55,543 - __main__ - INFO - Collection has 345 points
+2026-01-05 20:14:55,953 - __main__ - WARNING - Cohere API rate limit exceeded (attempt 1/3)
+2026-01-05 20:14:55,953 - __main__ - INFO - Waiting 1 seconds before retry...
+2026-01-05 20:14:57,285 - __main__ - WARNING - Cohere API rate limit exceeded (attempt 2/3)
+2026-01-05 20:14:57,285 - __main__ - INFO - Waiting 2 seconds before retry...
+2026-01-05 20:14:59,640 - __main__ - WARNING - Cohere API rate limit exceeded (attempt 3/3)
+2026-01-05 20:14:59,640 - __main__ - ERROR - Cohere API rate limit exceeded after all retries
+2026-01-05 20:14:59,641 - __main__ - WARNING - Cohere embedding failed, falling back to local embeddings
+2026-01-05 20:14:59,641 - __main__ - INFO - Using local embedding service as fallback
+2026-01-05 20:15:00,561 - __main__ - ERROR - Qdrant search failed: 400 - {"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 384"},"time":0.000540393}
+2026-01-05 20:15:00,562 - __main__ - ERROR - Retrieval failed: No documents found in Qdrant

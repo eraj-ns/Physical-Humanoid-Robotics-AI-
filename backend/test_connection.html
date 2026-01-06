@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Frontend-Backend Connection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Frontend-Backend Connection</h1>
+
+    <div id="status"></div>
+
+    <h2>Test API Connection</h2>
+    <button onclick="testBackend()">Test Backend Connection</button>
+    <button onclick="testQuery()">Test Query Endpoint</button>
+
+    <div>
+        <label for="queryInput">Enter Query:</label><br>
+        <input type="text" id="queryInput" value="What is ROS 2?" style="width: 300px; padding: 8px;">
+        <button onclick="sendQuery()">Send Query</button>
+    </div>
+
+    <div id="response"></div>
+
+    <script>
+        // Check if we can access the environment variable
+        document.getElementById('status').innerHTML =
+            '<div class="status success">Page loaded successfully. ' +
+            'Environment API URL: ' + (window.ENV ? window.ENV.REACT_APP_API_URL : 'Not available') +
+            '</div>';
+
+        async function testBackend() {
+            const apiUrl = window.ENV?.REACT_APP_API_URL || 'http://localhost:8000';
+            const statusDiv = document.getElementById('status');
+
+            try {
+                statusDiv.innerHTML = '<div class="status">Testing backend at: ' + apiUrl + '</div>';
+
+                const response = await fetch(`${apiUrl}/health`);
+                if (response.ok) {
+                    statusDiv.innerHTML = '<div class="status success">✅ Backend is accessible! Status: ' + response.status + '</div>';
+                } else {
+                    statusDiv.innerHTML = '<div class="status error">❌ Backend returned error: ' + response.status + '</div>';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<div class="status error">❌ Error connecting to backend: ' + error.message + '</div>';
+            }
+        }
+
+        async function testQuery() {
+            const apiUrl = window.ENV?.REACT_APP_API_URL || 'http://localhost:8000';
+            const responseDiv = document.getElementById('response');
+
+            try {
+                responseDiv.innerHTML = 'Testing query endpoint...';
+
+                const response = await fetch(`${apiUrl}/query`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: 'test connection',
+                        max_tokens: 1024
+                    }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    responseDiv.innerHTML = '✅ Query successful!\n\nResponse content length: ' +
+                                          data.content.length + ' characters\n' +
+                                          'Sources returned: ' + data.sources.length + '\n\n' +
+                                          'Content preview: ' + data.content.substring(0, 200) + '...';
+                } else {
+                    responseDiv.innerHTML = '❌ Query failed with status: ' + response.status;
+                }
+            } catch (error) {
+                responseDiv.innerHTML = '❌ Error sending query: ' + error.message;
+            }
+        }
+
+        async function sendQuery() {
+            const queryInput = document.getElementById('queryInput').value;
+            const apiUrl = window.ENV?.REACT_APP_API_URL || 'http://localhost:8000';
+            const responseDiv = document.getElementById('response');
+
+            if (!queryInput.trim()) {
+                responseDiv.innerHTML = 'Please enter a query first.';
+                return;
+            }
+
+            try {
+                responseDiv.innerHTML = 'Sending query...';
+
+                const response = await fetch(`${apiUrl}/query`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: queryInput,
+                        max_tokens: 1024
+                    }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    responseDiv.innerHTML = '✅ Query successful!\n\nResponse:\n' + data.content + '\n\nConfidence: ' +
+                                          (data.confidence || 'N/A') + '\nSources: ' + data.sources.length;
+                } else {
+                    responseDiv.innerHTML = '❌ Query failed with status: ' + response.status;
+                    const errorText = await response.text();
+                    responseDiv.innerHTML += '\nError: ' + errorText;
+                }
+            } catch (error) {
+                responseDiv.innerHTML = '❌ Error sending query: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

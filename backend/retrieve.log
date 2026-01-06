@@ -1,0 +1,213 @@
+2026-01-02 23:45:38,121 - __main__ - INFO - Converting query to embedding: VLA systems...
+2026-01-02 23:45:38,122 - __main__ - INFO - Initializing Cohere client
+2026-01-02 23:45:38,700 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-02 23:45:39,145 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-02 23:45:39,168 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions
+2026-01-02 23:45:39,169 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-02 23:45:40,774 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-02 23:45:40,800 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-02 23:47:27,010 - __main__ - INFO - Converting query to embedding: VLA systems...
+2026-01-02 23:47:27,011 - __main__ - INFO - Initializing Cohere client
+2026-01-02 23:47:27,627 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-02 23:47:28,201 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-02 23:47:28,213 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions
+2026-01-02 23:47:28,213 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-02 23:47:29,739 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-02 23:47:29,748 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-02 23:50:32,672 - __main__ - INFO - Converting query to embedding: explain ROS 2...
+2026-01-02 23:50:32,673 - __main__ - INFO - Initializing Cohere client
+2026-01-02 23:50:33,188 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-02 23:50:33,557 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-02 23:50:33,565 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '48a32cb135f306aa5a8533d05b6fc620', 'date': 'Fri, 02 Jan 2026 18:50:27 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '89b1c1bb-186c-4b41-9553-6df463da854d', 'message': 'Please wait and try again later'}
+2026-01-02 23:55:15,554 - __main__ - INFO - Converting query to embedding: VLA systems in robotics...
+2026-01-02 23:55:15,555 - __main__ - INFO - Initializing Cohere client
+2026-01-02 23:55:16,208 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-02 23:55:16,617 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-02 23:55:16,621 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '2c5a3f65c1b9c41eb7e2d91d29593c30', 'date': 'Fri, 02 Jan 2026 18:55:10 GMT', 'x-envoy-upstream-service-time': '15', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'dae75b62-92bc-4aa1-b0e0-3f8e129e2ae1', 'message': 'Please wait and try again later'}
+2026-01-02 23:55:59,298 - __main__ - INFO - Converting query to embedding: Vision Language Action models...
+2026-01-02 23:55:59,299 - __main__ - INFO - Initializing Cohere client
+2026-01-02 23:55:59,872 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-02 23:56:00,215 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-02 23:56:00,217 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '70c2e87f190c9ffcb81cc4e8b3d4d5c5', 'date': 'Fri, 02 Jan 2026 18:55:54 GMT', 'x-envoy-upstream-service-time': '10', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'df4da997-be2a-4f2c-a5de-d38b79c5e97c', 'message': 'Please wait and try again later'}
+2026-01-02 23:56:19,534 - __main__ - INFO - Converting query to embedding: Explain ROS 2 architecture...
+2026-01-02 23:56:19,535 - __main__ - INFO - Initializing Cohere client
+2026-01-02 23:56:20,009 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-02 23:56:20,696 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-02 23:56:20,697 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f2834a2319ae141a63d1909a4b4ecc5a', 'date': 'Fri, 02 Jan 2026 18:56:14 GMT', 'x-envoy-upstream-service-time': '288', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '9d5e8634-78df-4b0e-81dc-0f7700a72e56', 'message': 'Please wait and try again later'}
+2026-01-03 00:06:12,251 - __main__ - INFO - Converting query to embedding: Vision Language Action models...
+2026-01-03 00:06:12,252 - __main__ - INFO - Initializing Cohere client
+2026-01-03 00:06:12,806 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 00:06:13,508 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 00:06:13,515 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '1e4ef90232c7319479929c42932fc68c', 'date': 'Fri, 02 Jan 2026 19:06:07 GMT', 'x-envoy-upstream-service-time': '15', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '0786f35f-04bf-4009-87f5-ee8809dcc4f4', 'message': 'Please wait and try again later'}
+2026-01-03 00:28:56,841 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 00:28:56,842 - __main__ - INFO - Initializing Cohere client
+2026-01-03 00:28:57,413 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 00:28:58,130 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 00:28:58,134 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'c801035ca27a6a40d2d7943f5f953617', 'date': 'Fri, 02 Jan 2026 19:28:52 GMT', 'x-envoy-upstream-service-time': '12', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '3f84456c-ae19-4348-8202-aebb2c14f325', 'message': 'Please wait and try again later'}
+2026-01-03 13:10:59,770 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 13:10:59,771 - __main__ - INFO - Initializing Cohere client
+2026-01-03 13:11:01,503 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 13:11:01,945 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 13:11:01,966 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '78623ba5fcd112e6638833930cb22134', 'date': 'Sat, 03 Jan 2026 08:11:01 GMT', 'x-envoy-upstream-service-time': '20', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '08963d49-3723-4826-9950-964f34705dd2', 'message': 'Please wait and try again later'}
+2026-01-03 13:17:35,522 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 13:17:35,523 - __main__ - INFO - Initializing Cohere client
+2026-01-03 13:17:36,029 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 13:17:36,560 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 13:17:36,567 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'da65b528c9432b07e13e83d730f3d9f9', 'date': 'Sat, 03 Jan 2026 08:17:36 GMT', 'x-envoy-upstream-service-time': '13', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd81d0ac3-7863-45da-8576-82033f90b84c', 'message': 'Please wait and try again later'}
+2026-01-03 13:29:42,070 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 13:29:42,071 - __main__ - INFO - Initializing Cohere client
+2026-01-03 13:29:42,609 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 13:29:43,090 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 13:29:43,097 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '841b6b3917e0526885672eebbb5b3c49', 'date': 'Sat, 03 Jan 2026 08:29:42 GMT', 'x-envoy-upstream-service-time': '14', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'cd356b24-8306-4212-a2a8-38cc7ee1e4c5', 'message': 'Please wait and try again later'}
+2026-01-03 13:51:14,725 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 13:51:14,725 - __main__ - INFO - Initializing Cohere client
+2026-01-03 13:51:15,543 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 13:51:16,210 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 13:51:16,214 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4db69f73a167188649dcb02fd71ae758', 'date': 'Sat, 03 Jan 2026 08:51:15 GMT', 'x-envoy-upstream-service-time': '17', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd4dd0e2d-4a84-4542-b752-2d6b07744be7', 'message': 'Please wait and try again later'}
+2026-01-03 13:53:58,623 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 13:53:58,623 - __main__ - INFO - Initializing Cohere client
+2026-01-03 13:53:59,412 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 13:53:59,871 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 13:54:00,037 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'fc69983b176899c95bc8e8176b9e5bec', 'date': 'Sat, 03 Jan 2026 08:53:59 GMT', 'x-envoy-upstream-service-time': '19', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd417e10e-6e1d-4bbc-91fa-b41e515b7f0d', 'message': 'Please wait and try again later'}
+2026-01-03 14:01:42,840 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:01:42,840 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:01:43,317 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:01:45,148 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:01:45,152 - __main__ - ERROR - Failed to convert query to embedding: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'ba7f6fd9bb4343475f4d72f17edc10f0', 'date': 'Sat, 03 Jan 2026 09:01:44 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'cb67f713-c4a2-4c97-92fa-1545fe35b5d0', 'message': 'Please wait and try again later'}
+2026-01-03 14:03:58,144 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:03:58,144 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:03:58,583 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:03:58,907 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:03:58,910 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '585ba1f9f0c6bec4cc2f26630b382a69', 'date': 'Sat, 03 Jan 2026 09:03:58 GMT', 'x-envoy-upstream-service-time': '23', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'a4002f27-b92a-4ed7-879b-60880a726b4b', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:04:19,079 - __main__ - ERROR - Failed to initialize local embedding model: 
+2026-01-03 14:04:19,080 - __main__ - ERROR - Both Cohere and local embedding failed: 
+2026-01-03 14:05:05,506 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:05:05,506 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:05:05,981 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:05:06,298 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:05:06,303 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '73c425f61dfd265177112a00df6bf871', 'date': 'Sat, 03 Jan 2026 09:05:06 GMT', 'x-envoy-upstream-service-time': '21', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '671d7452-f602-4a9e-b463-2c03111a0035', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:05:15,414 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 14:05:15,414 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 14:06:18,436 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-03 14:06:18,575 - __main__ - INFO - Successfully converted query to embedding with 384 dimensions using local embeddings
+2026-01-03 14:06:18,576 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:06:19,931 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:06:19,956 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:08:04,339 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:08:04,339 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:08:04,817 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:08:05,516 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:08:05,518 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b64b7efe84c2f15cca50d1f9f21449d5', 'date': 'Sat, 03 Jan 2026 09:08:05 GMT', 'x-envoy-upstream-service-time': '11', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '93eab6ba-edf7-4953-8305-e961986cd1a3', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:08:15,400 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 14:08:15,400 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 14:08:19,289 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-03 14:08:19,750 - __main__ - INFO - Successfully converted query to embedding with 384 dimensions using local embeddings
+2026-01-03 14:08:19,750 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:08:22,495 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:08:22,509 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:08:22,509 - __main__ - WARNING - Qdrant search method not found, trying legacy method
+2026-01-03 14:08:22,509 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:08:23,571 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:08:23,590 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:08:23,591 - __main__ - ERROR - Legacy search method also failed: 'QdrantClient' object has no attribute 'search'
+2026-01-03 14:09:32,127 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:09:32,127 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:09:32,674 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:09:32,972 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:09:32,974 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '4b297a43c3a596ab8c39183e0ad7ebe5', 'date': 'Sat, 03 Jan 2026 09:09:32 GMT', 'x-envoy-upstream-service-time': '9', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '3b715101-663d-4291-852a-4fd1b2456e62', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:09:43,284 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 14:09:43,284 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 14:09:47,766 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-03 14:09:47,807 - __main__ - INFO - Successfully converted query to embedding with 384 dimensions using local embeddings
+2026-01-03 14:09:47,808 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:09:48,880 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:09:48,898 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:12:01,272 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:12:01,272 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:12:01,720 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:12:02,075 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:12:02,077 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'fdc299e89e2b72e22dc3e9c2c2e651ad', 'date': 'Sat, 03 Jan 2026 09:12:01 GMT', 'x-envoy-upstream-service-time': '5', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '42281fdf-d4d9-46ad-bd05-2955473f0b8e', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:12:08,729 - __main__ - ERROR - Failed to initialize local embedding model: 
+2026-01-03 14:12:08,731 - __main__ - WARNING - Local embedding model not available, using dummy embedding
+2026-01-03 14:12:08,731 - __main__ - INFO - Successfully converted query to embedding with 384 dimensions using local embeddings
+2026-01-03 14:12:08,731 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:12:10,089 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:12:10,341 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:12:10,746 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 400 Bad Request"
+2026-01-03 14:12:10,753 - __main__ - WARNING - query_points method failed, trying older search method
+2026-01-03 14:12:10,754 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:12:11,874 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:14:48,229 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:14:48,229 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:14:48,664 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:14:49,069 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:14:49,075 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '59eab34ebcee8741dcb978dafec75ed0', 'date': 'Sat, 03 Jan 2026 09:14:48 GMT', 'x-envoy-upstream-service-time': '18', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'd2717ff1-07fe-46e5-b750-2752b07d84db', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:14:57,503 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 14:14:57,503 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 14:15:02,074 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-03 14:15:02,197 - __main__ - INFO - Successfully converted query to embedding with 384 dimensions using local embeddings
+2026-01-03 14:15:02,197 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:15:03,248 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:15:03,263 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:15:03,641 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 400 Bad Request"
+2026-01-03 14:15:03,644 - __main__ - WARNING - query_points method failed, trying HTTP API approach
+2026-01-03 14:15:04,028 - __main__ - ERROR - HTTP search failed: 400 - {"status":{"error":"Wrong input: Vector dimension error: expected dim: 1024, got 384"},"time":0.00030498}
+2026-01-03 14:16:54,417 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:16:54,418 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:16:54,874 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:16:55,301 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 14:16:55,332 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions using Cohere
+2026-01-03 14:16:55,332 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:16:56,437 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:16:56,453 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:16:56,864 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 14:21:05,492 - __main__ - INFO - Converting query to embedding: ROS 2...
+2026-01-03 14:21:05,492 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:21:05,946 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:21:06,486 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-03 14:21:06,492 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'f9457caeac383c13ba3c2b683f7a8de1', 'date': 'Sat, 03 Jan 2026 09:21:06 GMT', 'x-envoy-upstream-service-time': '8', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '2e526f8c-e585-4027-9869-2423e31337d2', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-03 14:21:15,163 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-03 14:21:15,163 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-03 14:21:19,700 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-03 14:21:19,951 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions using local embeddings
+2026-01-03 14:21:19,951 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:21:21,384 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:21:21,428 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:21:21,927 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-03 14:22:54,702 - __main__ - INFO - Converting query to embedding: VLA systems in robotics...
+2026-01-03 14:22:54,703 - __main__ - INFO - Initializing Cohere client
+2026-01-03 14:22:55,202 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-03 14:22:55,515 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 200 OK"
+2026-01-03 14:22:55,548 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions using Cohere
+2026-01-03 14:22:55,548 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-03 14:22:56,682 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-03 14:22:56,724 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-03 14:22:57,150 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-05 20:17:43,595 - __main__ - INFO - Converting query to embedding: What is ROS 2?...
+2026-01-05 20:17:43,597 - __main__ - INFO - Initializing Cohere client
+2026-01-05 20:17:44,051 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-05 20:17:44,826 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-05 20:17:44,828 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'a07d2e95bfd2135b867b08fcdb9827ec', 'date': 'Mon, 05 Jan 2026 15:17:42 GMT', 'x-envoy-upstream-service-time': '23', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': 'ccf22024-9b77-42f4-960f-2b496c4f90b0', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-05 20:17:53,116 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 20:17:53,116 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-05 20:17:58,543 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-05 20:17:58,583 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions using local embeddings
+2026-01-05 20:17:58,583 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-05 20:18:00,112 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-05 20:18:00,121 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-05 20:18:00,660 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
+2026-01-05 21:00:22,811 - retrieve - INFO - Converting query to embedding: test query...
+2026-01-05 21:00:22,815 - retrieve - INFO - Successfully converted query to embedding with 0 dimensions using Cohere
+2026-01-05 21:01:20,577 - __main__ - INFO - Converting query to embedding: What is ROS 2?...
+2026-01-05 21:01:20,577 - __main__ - INFO - Initializing Cohere client
+2026-01-05 21:01:21,061 - __main__ - INFO - Successfully initialized Cohere client
+2026-01-05 21:01:21,520 - httpx - INFO - HTTP Request: POST https://api.cohere.com/v1/embed "HTTP/1.1 429 Too Many Requests"
+2026-01-05 21:01:21,521 - __main__ - WARNING - Cohere embedding failed: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': 'b5da9a0d9076e3d125347dc7fc42dc6c', 'date': 'Mon, 05 Jan 2026 16:01:19 GMT', 'x-envoy-upstream-service-time': '17', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '1524c26e-a3b3-4df5-b63f-c10ba976d0aa', 'message': 'Please wait and try again later'}, falling back to local embeddings
+2026-01-05 21:01:34,920 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2026-01-05 21:01:34,920 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-05 21:01:39,856 - __main__ - INFO - Local embedding model initialized successfully
+2026-01-05 21:01:40,271 - __main__ - INFO - Successfully converted query to embedding with 1024 dimensions using local embeddings
+2026-01-05 21:01:40,271 - __main__ - INFO - Connecting to Qdrant at https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io
+2026-01-05 21:01:42,031 - httpx - INFO - HTTP Request: GET https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2026-01-05 21:01:42,045 - __main__ - INFO - Successfully connected to Qdrant
+2026-01-05 21:01:42,544 - httpx - INFO - HTTP Request: POST https://2a064d9d-68e1-4367-9d8b-aa3ed6bc5b8a.europe-west3-0.gcp.cloud.qdrant.io:6333/collections/rag-chatbot-hackathon/points/query "HTTP/1.1 200 OK"
