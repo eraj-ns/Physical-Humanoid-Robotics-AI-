@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chatbot Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .chat-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            margin-left: auto;
+        }
+        .bot-message {
+            background-color: #e9ecef;
+            color: #333;
+            margin-right: auto;
+        }
+        .chat-input-area {
+            display: flex;
+            gap: 10px;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+        .chat-send {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .chat-send:disabled {
+            background-color: #cccccc;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Book Assistant Chatbot Test</h1>
+    <p>This is a lightweight test interface to connect to your backend API on port 8000.</p>
+
+    <div class="chat-container">
+        <div id="chat-messages" class="chat-messages">
+            <div class="message bot-message">
+                Hello! I'm your Book Assistant. How can I help you today?
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <textarea
+                id="chat-input"
+                class="chat-input"
+                placeholder="Ask about the book..."
+                rows="1"
+            ></textarea>
+            <button id="send-btn" class="chat-send">Send</button>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const sendBtn = document.getElementById('send-btn');
+        const statusDiv = document.getElementById('status');
+
+        // Auto-resize textarea
+        chatInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // Send message on Enter (without Shift)
+        chatInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        async function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            // Add user message to chat
+            addMessage(message, 'user');
+            chatInput.value = '';
+            chatInput.style.height = 'auto';
+            sendBtn.disabled = true;
+
+            try {
+                statusDiv.className = 'status';
+                statusDiv.textContent = 'Thinking...';
+
+                // Send to backend API
+                const response = await fetch('http://localhost:8000/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: message,
+                        max_tokens: 1024
+                    }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    addMessage(data.content, 'bot');
+
+                    statusDiv.className = 'status success';
+                    statusDiv.textContent = `Response received! Sources: ${data.sources.length}, Confidence: ${data.confidence || 'N/A'}`;
+                } else {
+                    const errorText = await response.text();
+                    addMessage(`Error: ${errorText}`, 'bot');
+
+                    statusDiv.className = 'status error';
+                    statusDiv.textContent = `Error: ${response.status}`;
+                }
+            } catch (error) {
+                addMessage(`Connection error: ${error.message}`, 'bot');
+
+                statusDiv.className = 'status error';
+                statusDiv.textContent = `Connection error: ${error.message}`;
+            } finally {
+                sendBtn.disabled = false;
+            }
+        }
+
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', `${sender}-message`);
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+    </script>
+</body>
+</html>
