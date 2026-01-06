@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="cube">
+  <link name="baseLink">
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.000166667" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000166667"/>
+    </inertial>
+  </link>
+
+  <gazebo reference="baseLink">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+</robot>

@@ -1,0 +1,7 @@
+.embedded-chatbot-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  margin: 2rem 0;
+}

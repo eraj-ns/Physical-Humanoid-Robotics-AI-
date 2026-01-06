@@ -1,0 +1,135 @@
+// @ts-check
+import {themes as prismThemes} from 'prism-react-renderer';
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'Physical AI & Humanoid Robotics Course',
+  favicon: 'img/pngwing.com (4).png',
+
+  future: {
+    v4: true,
+  },
+
+  url: 'https://your-docusaurus-site.example.com',
+  baseUrl: '/',
+
+  organizationName: 'eraj-ns',
+  projectName: 'Physical-Humanoid-Robotics-AI',
+
+  onBrokenLinks: 'warn',
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  plugins: [
+    [
+      './src/plugins/docusaurus-plugin-global-chatbot',
+      {
+        // Pass environment variables to the client
+        environment: {
+          REACT_APP_API_URL: process.env.REACT_APP_API_URL || 'http://localhost:8001',
+        },
+      },
+    ],
+  ],
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
+  ],
+
+  themes: [
+    // ... your existing themes
+  ],
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
+      navbar: {
+        title: 'BOOK',
+        logo: {
+          alt: 'My Site Logo',
+          src: 'img/pngwing.com (4).png',
+        },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'READ MODULES',
+          },
+          {
+            href: 'https://github.com/eraj-ns',
+            label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'html',
+            position: 'right',
+            value: '<div id="chatbot-button-container"></div>',
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'BOOK',
+                to: '/docs/Module1/intro',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'X',
+                href: 'https://x.com/eraj_naz74667',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/eraj-naz-b919572bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/eraj-ns',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} ERAJ NAZ. All rights reserved.`,
+      },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+      },
+    }),
+};
+
+export default config;
